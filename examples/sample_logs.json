@@ -1,0 +1,74 @@
+[
+  {
+    "id": "log-001001",
+    "timestamp": 1726830000000000000,
+    "level": "INFO",
+    "service": "api-gateway",
+    "host": "ingress-prod-01",
+    "message": "Incoming HTTP POST /api/v2/checkout from 192.168.1.100 status 200",
+    "fields": {"method": "POST", "status": "200", "datacenter": "us-east-1"}
+  },
+  {
+    "id": "log-001002",
+    "timestamp": 1726830005000000000,
+    "level": "INFO",
+    "service": "auth-service",
+    "host": "auth-prod-02",
+    "message": "OAuth token verified for user_id=984321 scopes=[read, write]",
+    "fields": {"user_id": "984321", "auth_type": "jwt"}
+  },
+  {
+    "id": "log-001003",
+    "timestamp": 1726830010000000000,
+    "level": "WARN",
+    "service": "inventory-service",
+    "host": "inv-prod-01",
+    "message": "Low stock warning: SKU-9942 inventory below threshold (3 items left)",
+    "fields": {"sku": "SKU-9942", "stock": "3"}
+  },
+  {
+    "id": "log-001004",
+    "timestamp": 1726830015000000000,
+    "level": "ERROR",
+    "service": "payment-gateway",
+    "host": "pay-prod-03",
+    "message": "Payment processing connection timeout communicating with Stripe API gateway after 5000ms",
+    "fields": {"provider": "stripe", "error_code": "ETIMEDOUT", "attempt": "3"}
+  },
+  {
+    "id": "log-001005",
+    "timestamp": 1726830020000000000,
+    "level": "ERROR",
+    "service": "order-service",
+    "host": "ord-prod-04",
+    "message": "Order placement rollback initiated due to payment processing connection timeout",
+    "fields": {"order_id": "ord-77123", "action": "rollback"}
+  },
+  {
+    "id": "log-001006",
+    "timestamp": 1726830025000000000,
+    "level": "DEBUG",
+    "service": "cache-service",
+    "host": "redis-prod-01",
+    "message": "Cache evict key=session:user:984321 ttl_expired=false",
+    "fields": {"cache_engine": "redis", "hit": "true"}
+  },
+  {
+    "id": "log-001007",
+    "timestamp": 1726830030000000000,
+    "level": "INFO",
+    "service": "notification-service",
+    "host": "notify-prod-01",
+    "message": "Email alert dispatched to customer support for failed transaction ord-77123",
+    "fields": {"channel": "ses", "template": "order_failure"}
+  },
+  {
+    "id": "log-001008",
+    "timestamp": 1726830035000000000,
+    "level": "WARN",
+    "service": "database-cluster",
+    "host": "db-primary-01",
+    "message": "Slow query detected: SELECT * FROM audit_logs WHERE timestamp > ? (execution took 850ms)",
+    "fields": {"duration_ms": "850", "table": "audit_logs"}
+  }
+]

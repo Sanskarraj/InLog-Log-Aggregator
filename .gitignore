@@ -1,0 +1,11 @@
+# Binaries
+bin/
+
+# Database files
+data/
+*.data
+*.index
+*.filter
+*.meta
+MANIFEST*
+wal_*.log
