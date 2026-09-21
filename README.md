@@ -16,7 +16,7 @@ An append-optimized storage engine and real-time distributed log search platform
 +---------------------------------------------------------------------------------+
 |                        Log Aggregator & Search Layer                            |
 |  - Ingestion: Structured Parser (JSON / Syslog) -> Tokenizer -> Secondary Index |
-|  - Search: Inverted Index (term:token:ts:id) with Multi-Term Boolean (AND/OR)  |
+|  - Search: Inverted Index (term:token:ts:id) with Multi-Term Boolean (AND/OR)   |
 |  - Aggregation: Time-bucketed histograms with log level breakdown               |
 +------------------------------------------+--------------------------------------+
                                            | Key-Value Storage API
